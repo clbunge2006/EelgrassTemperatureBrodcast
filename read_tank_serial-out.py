@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 msg = ser.readline().decode('utf-8').rstrip()
                 header = msg[0]
                 content = msg.split("C")[0][1:]
-                chksum = msg.split("C")[1]
+                chksum = msg.split("C")[1][0]
                 
                 # calculate checksum
                 ch = 0
